@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl" class="sunset">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="theme-color" content="#160a24">
+<meta name="description" content="یه سؤال خیلی مهم. یه دکمهٔ دوستانه. یه دکمهٔ… تزئینی.">
+<title>یه سؤال خیلی مهم 💌</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💘</text></svg>">
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@400;500;700;900&display=swap" rel="stylesheet">
+<script>
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: { sans: ['Vazirmatn', 'Tahoma', 'sans-serif'] },
+      colors: {
+        bg0: 'var(--bg0)', bg1: 'var(--bg1)',
+        surface: 'var(--surface)', surface2: 'var(--surface2)',
+        ink: 'var(--ink)', muted: 'var(--muted)', line: 'var(--line)',
+        dom: 'var(--dom)', dom2: 'var(--dom2)',
+        acc: 'var(--acc)', acc2: 'var(--acc2)',
+        good: 'var(--good)', warn: 'var(--warn)', bad: 'var(--bad)', info: 'var(--info)'
+      },
+      animation: {
+        'drift1': 'drift1 26s ease-in-out infinite alternate',
+        'drift2': 'drift2 31s ease-in-out infinite alternate',
+        'drift3': 'drift3 24s ease-in-out infinite alternate',
+        'seal-pulse': 'sealPulse 1.8s ease-out infinite',
+        'shine': 'shine 3.2s ease-in-out infinite',
+        'floaty': 'floaty 5s ease-in-out infinite',
+        'blink': 'blink 1.6s infinite',
+        'rise-in': 'riseIn .7s cubic-bezier(.2,1,.3,1) both',
+        'card-in': 'cardIn .75s cubic-bezier(.2,1.1,.3,1) both',
+        'card-out': 'cardOut .45s ease-in both',
+        'shake': 'shakeA .42s ease',
+        'toast-in': 'toastIn .35s cubic-bezier(.2,1.4,.3,1) both',
+        'toast-out': 'toastOut .3s ease both',
+        'letter-pop': 'letterPop .55s cubic-bezier(.2,1.6,.3,1) both',
+        'ticket-in': 'ticketIn .7s cubic-bezier(.2,1.2,.3,1) both',
+        'stamp-in': 'stampIn .45s cubic-bezier(.2,1.8,.3,1) both',
+        'flash': 'flashA .6s ease-out both',
+      }
+    }
+  }
+}
+</script>
+<style>
+:root, .sunset {
+  --bg0:#160a24; --bg1:#2a0f3d; --surface:rgba(44,16,58,.78); --surface2:rgba(58,22,74,.9);
+  --ink:#fff4ea; --muted:#cfa9c9; --line:rgba(255,46,136,.35);
+  --dom:#ff2e88; --dom2:#ff6b9d; --acc:#ffb347; --acc2:#8b5cf6;
+  --good:#3ddc97; --warn:#ffc247; --bad:#ff5470; --info:#5cc8ff;
+}
+.neon {
+  --bg0:#060b1f; --bg1:#101a4a; --surface:rgba(14,22,64,.8); --surface2:rgba(22,32,88,.92);
+  --ink:#eef4ff; --muted:#9fb0e8; --line:rgba(255,61,154,.4);
+  --dom:#ff3d9a; --dom2:#ff7cc0; --acc:#22d3ee; --acc2:#7c5cff;
+  --good:#34e8a4; --warn:#ffd166; --bad:#ff5470; --info:#59c2ff;
+}
+.cherry {
+  --bg0:#1c060b; --bg1:#3d0a16; --surface:rgba(56,10,20,.82); --surface2:rgba(76,14,28,.92);
+  --ink:#fff1ec; --muted:#e0a9a0; --line:rgba(255,77,77,.4);
+  --dom:#ff4d4d; --dom2:#ff8a7a; --acc:#ffc94d; --acc2:#ff7ab8;
+  --good:#4ade80; --warn:#ffc94d; --bad:#ff3b5c; --info:#6cc9ff;
+}
+* { margin:0; padding:0; box-sizing:border-box; letter-spacing:0 !important; }
+html, body { height:100%; }
+body {
+  font-family:'Vazirmatn',Tahoma,sans-serif; color:var(--ink);
+  background:var(--bg0); overflow:hidden;
+  -webkit-font-smoothing:antialiased; text-rendering:optimizeLegibility;
+}
+[hidden] { display:none !important; }
+button { font-family:inherit; color:inherit; cursor:pointer; border:none; background:none; }
+input, select { font-family:inherit; }
+::selection { background:var(--dom); color:#fff; }
+:focus-visible { outline:2px solid var(--acc); outline-offset:3px; border-radius:6px; }
+* { scrollbar-width:thin; scrollbar-color:var(--dom) var(--bg1); }
+::-webkit-scrollbar { width:10px; height:10px; }
+::-webkit-scrollbar-track { background:var(--bg1); border-radius:8px; }
+::-webkit-scrollbar-thumb { background:linear-gradient(180deg,var(--dom),var(--acc2)); border-radius:8px; border:2px solid var(--bg1); }
+::-webkit-scrollbar-thumb:hover { background:linear-gradient(180deg,var(--dom2),var(--dom)); }
+.grain-bg {
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='160' height='160' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E");
+  background-size:160px 160px;
+}
+.env-letter-bg { background:linear-gradient(170deg,#fff8ef,#ffe9d6); }
+.env-flap-bg { background:linear-gradient(160deg,var(--dom),var(--acc2)); }
+.env-front-bg { background:linear-gradient(180deg,var(--surface2),var(--bg1)); }
+.seal-bg {
+  background:radial-gradient(circle at 32% 28%,var(--dom2),var(--dom) 55%,#b3125a);
+  box-shadow:0 6px 18px rgba(0,0,0,.45), inset 0 -3px 8px rgba(0,0,0,.3), inset 0 3px 6px rgba(255,255,255,.35);
+}
+.card-border {
+  background:linear-gradient(var(--surface),var(--surface)) padding-box,
+             linear-gradient(135deg,var(--dom),var(--acc2) 50%,var(--acc)) border-box;
+  border:1.5px solid transparent;
+}
+.btn-yes-bg {
+  background:linear-gradient(120deg,var(--dom),var(--dom2));
+  box-shadow:0 10px 30px color-mix(in oklab,var(--dom) 45%,transparent), inset 0 1px 0 rgba(255,255,255,.35);
+}
+.btn-yes-bg:hover {
+  box-shadow:0 14px 44px color-mix(in oklab,var(--dom) 65%,transparent), inset 0 1px 0 rgba(255,255,255,.4);
+}
+.btn-yes-shine::after {
+  content:""; position:absolute; top:0; left:-80%; width:50%; height:100%;
+  transform:skewX(-24deg); background:linear-gradient(90deg,transparent,rgba(255,255,255,.5),transparent);
+  animation:shine 3.2s ease-in-out infinite;
+}
+.grad-text {
+  background:linear-gradient(100deg,var(--dom),var(--acc) 60%,var(--dom2));
+  -webkit-background-clip:text; background-clip:text; color:transparent;
+}
+.ticket-bg { background:linear-gradient(150deg,#fff8ef,#ffe4d0); }
+.barcode-bg {
+  background:repeating-linear-gradient(90deg,#3a1030 0 2px,transparent 2px 5px,#3a1030 5px 6px,transparent 6px 10px,#3a1030 10px 13px,transparent 13px 15px);
+}
+.act-primary-bg {
+  background:linear-gradient(120deg,var(--dom),var(--acc2));
+  box-shadow:0 10px 26px color-mix(in oklab,var(--dom) 40%,transparent);
+}
+.drawer-bg { background:linear-gradient(170deg,var(--surface2),var(--bg0)); }
+@keyframes drift1 { to { transform: translate(9vmax,7vmax) scale(1.15); } }
+@keyframes drift2 { to { transform: translate(-8vmax,-6vmax) scale(.9); } }
+@keyframes drift3 { to { transform: translate(6vmax,-9vmax) scale(1.2); } }
+@keyframes sealPulse { 0% { transform: scale(.85); opacity: .8; } 100% { transform: scale(1.35); opacity: 0; } }
+@keyframes shine { 0%,60% { left: -80%; } 100% { left: 130%; } }
+@keyframes floaty { 50% { transform: translateY(-7px); } }
+@keyframes blink { 50% { opacity: .35; } }
+@keyframes riseIn { 0% { opacity: 0; transform: translateY(26px); } 100% { opacity: 1; transform: none; } }
+@keyframes cardIn { 0% { opacity: 0; transform: translateY(46px) scale(.92); } 100% { opacity: 1; transform: none; } }
+@keyframes cardOut { to { opacity: 0; transform: scale(1.18); filter: blur(6px); } }
+@keyframes shakeA { 0%,100% { transform: translateX(0); } 20% { transform: translateX(-9px) rotate(-.7deg); } 40% { transform: translateX(8px) rotate(.6deg); } 60% { transform: translateX(-6px); } 80% { transform: translateX(5px); } }
+@keyframes toastIn { 0% { opacity: 0; transform: translateY(16px) scale(.85); } 100% { opacity: 1; transform: none; } }
+@keyframes toastOut { to { opacity: 0; transform: translateY(10px) scale(.9); } }
+@keyframes letterPop { 0% { opacity: 0; transform: translateY(40px) rotate(8deg) scale(.6); } 100% { opacity: 1; transform: none; } }
+@keyframes ticketIn { 0% { opacity: 0; transform: translateY(50px) rotate(2.5deg); } 100% { opacity: 1; transform: none; } }
+@keyframes stampIn { 0% { opacity: 0; transform: rotate(-11deg) scale(3); } 100% { opacity: 1; transform: rotate(-11deg) scale(1); } }
+@keyframes flashA { 0% { opacity: 0; } 18% { opacity: .95; } 100% { opacity: 0; } }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration:.01ms !important; animation-iteration-count:1 !important; transition-duration:.01ms !important; }
+}
+</style>
+</head>
+<body class="font-sans text-ink bg-bg0 overflow-hidden">
+
+<div class="fixed inset-0 z-0 overflow-hidden" aria-hidden="true">
+  <div class="absolute rounded-full blur-[70px] opacity-50 w-[55vmax] h-[55vmax] -left-[18vmax] -top-[20vmax] animate-drift1" style="background:radial-gradient(circle,var(--dom),transparent 65%)"></div>
+  <div class="absolute rounded-full blur-[70px] opacity-50 w-[48vmax] h-[48vmax] -right-[16vmax] top-[8vmax] animate-drift2" style="background:radial-gradient(circle,var(--acc2),transparent 65%)"></div>
+  <div class="absolute rounded-full blur-[70px] opacity-30 w-[40vmax] h-[40vmax] left-[22vmax] -bottom-[18vmax] animate-drift3" style="background:radial-gradient(circle,var(--acc),transparent 62%)"></div>
+</div>
+<canvas id="bgfx" class="fixed inset-0 z-[1] pointer-events-none" aria-hidden="true"></canvas>
+<div class="fixed -inset-5 z-[2] pointer-events-none opacity-[.07] grain-bg" aria-hidden="true"></div>
+
+<section class="view fixed inset-0 z-10 grid place-items-center p-6 overflow-y-auto" id="introView">
+  <div class="w-full grid place-items-center min-h-full">
+    <div class="intro-inner text-center grid gap-[26px] justify-items-center animate-rise-in" id="introInner">
+      <div class="text-[.72rem] tracking-[.32em] uppercase text-acc font-bold">✦ محمولهٔ ویژه ✦</div>
+      <h1 class="intro-title font-black text-[clamp(1.7rem,5.5vw,2.7rem)] leading-[1.1]" id="introTitle">یه چیزی برات دارم</h1>
+      <div class="env relative w-[min(340px,84vw)] aspect-[16/10] cursor-pointer drop-shadow-[0_24px_50px_rgba(0,0,0,.5)]" id="envelope">
+        <div class="env-front-bg absolute inset-0 rounded-[14px] border border-line"></div>
+        <div class="env-letter-bg absolute left-[6%] right-[6%] top-[7%] bottom-[16%] z-[2] rounded-lg grid place-items-center font-black text-[1.25rem] text-[#3a1030] transition-transform duration-[600ms] delay-[220ms]" style="transition-timing-function:cubic-bezier(.2,1,.3,1)">تو + من؟</div>
+        <div class="env-front-bg absolute inset-0 z-[3] rounded-[14px] border border-line" style="clip-path:polygon(0 30%,50% 62%,100% 30%,100% 100%,0 100%)"></div>
+        <div class="env-flap-bg absolute top-0 left-0 right-0 h-[58%] z-[4] origin-top transition-transform duration-[550ms]" style="clip-path:polygon(0 0,100% 0,50% 100%);transition-timing-function:cubic-bezier(.6,0,.3,1)"></div>
+        <button class="seal-bg absolute left-1/2 top-[56%] -translate-x-1/2 -translate-y-1/2 z-[5] w-[66px] h-[66px] rounded-full grid place-items-center text-[1.6rem] transition-transform hover:scale-110 hover:-rotate-6" id="sealBtn" aria-label="باز کردن نامه">💌</button>
+        <div class="absolute left-1/2 top-[56%] -translate-x-1/2 -translate-y-1/2 w-[84px] h-[84px] rounded-full border-2 border-dom2 opacity-70 animate-seal-pulse pointer-events-none"></div>
+      </div>
+      <p class="text-[.8rem] text-muted tracking-[.08em]">روی مُهر بزن · تمبر لازم نیست</p>
+    </div>
+  </div>
+</section>
+
+<section class="view fixed inset-0 z-10 grid place-items-center p-6 overflow-y-auto" id="askView" hidden>
+  <div class="card-wrap w-[min(600px,94vw)] animate-card-in" id="cardWrap">
+    <div class="card card-border relative rounded-[26px] p-[clamp(28px,5vw,48px)] text-center backdrop-blur-[14px] shadow-[0_30px_80px_rgba(0,0,0,.55),0_0_60px_color-mix(in_oklab,var(--dom)_22%,transparent)] transition-transform duration-[180ms] ease-out" id="card" style="transform-style:preserve-3d">
+      <span class="sticker absolute text-[.66rem] font-bold tracking-[.12em] uppercase py-2 px-3 rounded-[10px] pointer-events-none animate-floaty -top-4 -right-5 -rotate-[8deg] bg-acc text-[#3a1030] shadow-[0_8px_20px_rgba(0,0,0,.35)] hidden sm:block">100% organic courage</span>
+      <span class="sticker absolute text-[.66rem] font-bold tracking-[.12em] uppercase py-2 px-3 rounded-[10px] pointer-events-none animate-floaty -bottom-[14px] -left-4 rotate-[6deg] bg-acc2 text-white shadow-[0_8px_20px_rgba(0,0,0,.35)] hidden sm:block" style="animation-delay:1.4s">no refunds</span>
+      <div class="kicker inline-flex items-center gap-2 text-[.68rem] font-bold tracking-[.28em] uppercase text-acc py-2 px-3.5 border border-[color-mix(in_oklab,var(--acc)_45%,transparent)] rounded-full bg-[color-mix(in_oklab,var(--acc)_10%,transparent)] animate-rise-in" style="animation-delay:.1s"><span class="dot w-[7px] h-[7px] rounded-full bg-good shadow-[0_0_10px_var(--good)] animate-blink"></span> یه سؤال خیلی مهم</div>
+<h1 class="question font-black text-[clamp(2rem,6.2vw,3.5rem)] leading-[1.08] my-[22px] mb-[14px] animate-rise-in" style="animation-delay:.22s" id="questionText" lang="fa" dir="rtl">می‌خوای با هم <b>بریم بیرون</b>؟</h1>
+<p class="sub text-muted text-[clamp(.9rem,2.4vw,1.02rem)] leading-[1.55] max-w-[42ch] mx-auto animate-rise-in" style="animation-delay:.34s" id="subText" lang="fa" dir="rtl">عجله نکن. هر دو دکمه کار می‌کنن؛ فقط یکیشون عذاب وجدان داره.</p>
+      <div class="btn-row flex gap-5 justify-center items-center mt-8 flex-wrap min-h-[64px] animate-rise-in" style="animation-delay:.46s" id="btnRow">
+        <button class="btn-yes btn-yes-bg btn-yes-shine relative overflow-hidden py-4 px-[42px] min-h-[56px] rounded-full font-bold text-[1.15rem] text-white transition-transform duration-[220ms] hover:shadow-[0_14px_44px_color-mix(in_oklab,var(--dom)_65%,transparent),inset_0_1px_0_rgba(255,255,255,.4)]" id="yesBtn">آره 💖</button>
+        <button class="btn-no py-[15px] px-[34px] min-h-[56px] rounded-full font-medium text-[1.02rem] text-muted border-[1.5px] border-[color-mix(in_oklab,var(--muted)_45%,transparent)] bg-[color-mix(in_oklab,var(--bg1)_55%,transparent)] transition-all duration-[250ms] hover:border-bad hover:text-bad whitespace-nowrap" id="noBtn">نه</button>
+      </div>
+      <p class="attempts-cap mt-5 text-[.74rem] tracking-[.14em] uppercase text-muted min-h-[1.2em] animate-rise-in" style="animation-delay:.46s" id="attemptsCap">&nbsp;</p>
+      <p class="resigned-note mt-[18px] text-[.85rem] text-warn italic" id="resignedNote" hidden>دکمهٔ «نه» استعفا داد. به منابع انسانی هم خبر دادیم. 💨</p>
+    </div>
+  </div>
+</section>
+
+<section class="view fixed inset-0 z-10 grid place-items-center p-6 overflow-y-auto" id="yayView" hidden>
+  <div class="yay-inner w-[min(640px,94vw)] text-center grid gap-[22px] justify-items-center py-[30px] pb-[46px]">
+    <div class="yay-kicker text-[.7rem] font-bold tracking-[.3em] uppercase text-good animate-rise-in" style="animation-delay:.15s">✔ تصمیم رسمی · پس‌گرفتن نداره</div>
+    <h1 class="yay-title font-black text-[clamp(2.6rem,9vw,5rem)] leading-none flex flex-wrap justify-center gap-[.02em]" id="yayTitle" aria-label="قرار جور شد"></h1>
+    <p class="yay-sub text-muted max-w-[46ch] leading-[1.6] animate-rise-in" style="animation-delay:.7s" id="yaySub"></p>
+    <div class="ticket ticket-bg relative w-[min(520px,100%)] flex text-right rounded-[18px] overflow-visible text-[#3a1030] shadow-[0_26px_60px_rgba(0,0,0,.5)] animate-ticket-in" style="animation-delay:.95s">
+      <div class="stamp absolute -top-[18px] -left-3 z-[2] py-[9px] px-4 rounded-[10px] -rotate-[11deg] font-bold text-[.95rem] tracking-[.2em] text-good border-[3px] border-double border-good bg-[color-mix(in_oklab,var(--bg0)_82%,transparent)] shadow-[0_0_24px_color-mix(in_oklab,var(--good)_45%,transparent)] animate-stamp-in" style="animation-delay:1.55s">APPROVED ✔</div>
+      <div class="stub flex-none w-[86px] grid place-items-center border-l-2 border-dashed border-[rgba(58,16,48,.35)] py-[18px]">
+        <span class="[writing-mode:vertical-rl] rotate-180 font-bold text-[.72rem] tracking-[.34em] uppercase text-[#b3125a]">admit two</span>
+      </div>
+      <div class="ticket-main flex-1 py-[22px] px-6 grid gap-[7px]">
+        <div class="tk text-[.64rem] font-bold tracking-[.3em] uppercase text-[#b3125a]">hangout · برنامهٔ دو مرحله‌ای</div>
+        <div class="ticket-plan font-black text-[clamp(1.15rem,3.6vw,1.5rem)] leading-[1.15]" id="ticketPlan"></div>
+        <div class="legs grid gap-[10px] my-[6px] mb-1">
+          <div class="leg flex gap-[10px] items-start py-[9px] px-[11px] rounded-[11px] bg-[rgba(58,16,48,.06)] border border-dashed border-[rgba(58,16,48,.22)]">
+            <span class="leg-n flex-none w-[22px] h-[22px] rounded-full grid place-items-center text-[.7rem] font-bold text-white bg-[#b3125a]">۱</span>
+<div><b class="block text-[.92rem] text-[#3a1030]" lang="fa" dir="rtl">🎬 فیلم اودیسه در سینما</b></div>
+          </div>
+          <div class="leg flex gap-[10px] items-start py-[9px] px-[11px] rounded-[11px] bg-[rgba(58,16,48,.06)] border border-dashed border-[rgba(58,16,48,.22)]">
+            <span class="leg-n flex-none w-[22px] h-[22px] rounded-full grid place-items-center text-[.7rem] font-bold text-white bg-[#b3125a]">۲</span>
+            <div><b class="block text-[.92rem] text-[#3a1030]">☕ یه کافه</b></div>
+          </div>
+        </div>
+        <div class="ticket-meta text-[.86rem] text-[#6b3a55] leading-[1.5]" id="ticketWhen"></div>
+        <div class="ticket-serial text-[.68rem] tracking-[.18em] text-[#9a6b80] mt-1" id="ticketSerial"></div>
+        <div class="barcode-bg h-8 mt-2 opacity-85 rounded-sm" aria-hidden="true"></div>
+      </div>
+    </div>
+    <div class="countdown flex gap-[14px] animate-rise-in" style="animation-delay:1.2s" id="countdown">
+      <div class="cd-cell min-w-[72px] py-3 px-[10px] rounded-[14px] bg-surface border border-line"><b class="block font-black text-[1.7rem] text-acc tabular-nums" id="cdD">۰</b><i class="not-italic text-[.62rem] tracking-[.22em] uppercase text-muted">روز</i></div>
+      <div class="cd-cell min-w-[72px] py-3 px-[10px] rounded-[14px] bg-surface border border-line"><b class="block font-black text-[1.7rem] text-acc tabular-nums" id="cdH">۰</b><i class="not-italic text-[.62rem] tracking-[.22em] uppercase text-muted">ساعت</i></div>
+      <div class="cd-cell min-w-[72px] py-3 px-[10px] rounded-[14px] bg-surface border border-line"><b class="block font-black text-[1.7rem] text-acc tabular-nums" id="cdM">۰</b><i class="not-italic text-[.62rem] tracking-[.22em] uppercase text-muted">دقیقه</i></div>
+      <div class="cd-cell min-w-[72px] py-3 px-[10px] rounded-[14px] bg-surface border border-line"><b class="block font-black text-[1.7rem] text-acc tabular-nums" id="cdS">۰</b><i class="not-italic text-[.62rem] tracking-[.22em] uppercase text-muted">ثانیه</i></div>
+    </div>
+    <div class="yay-actions flex gap-3 flex-wrap justify-center animate-rise-in" style="animation-delay:1.35s">
+      <button class="act ghost py-[13px] px-[22px] min-h-[48px] rounded-full font-bold text-[.92rem] text-acc border-[1.5px] border-[color-mix(in_oklab,var(--acc)_55%,transparent)] transition-all hover:-translate-y-[3px]" id="smsBtn" hidden>💬 بهش پیام بده</button>
+    </div>
+    <button class="replay text-[.74rem] text-muted underline decoration-dotted opacity-70 hover:opacity-100 hover:text-dom2 animate-rise-in" style="animation-delay:1.5s" id="replayBtn">سؤال رو دوباره ببین (برای علم)</button>
+  </div>
+</section>
+
+<div id="roam" class="fixed inset-0 z-[30] pointer-events-none" aria-hidden="false"></div>
+<canvas id="confetti" class="fixed inset-0 z-[60] pointer-events-none" aria-hidden="true"></canvas>
+<div id="flash" class="fixed inset-0 z-[65] pointer-events-none opacity-0" style="background:radial-gradient(circle at 50% 55%,#fff 0%,var(--dom2) 35%,transparent 75%)" aria-hidden="true"></div>
+<div id="toasts" class="fixed bottom-[64px] left-1/2 -translate-x-1/2 z-[70] grid gap-2 justify-items-center pointer-events-none w-[min(440px,92vw)]" aria-live="polite"></div>
+
+<button class="gear-btn fixed bottom-[14px] left-[14px] z-[80] w-10 h-10 rounded-full grid place-items-center text-base text-acc bg-surface border border-line opacity-40 transition-all hover:opacity-100 hover:rotate-90" id="gearBtn" title="پشت صحنه" aria-label="اتاق فرمان">✦</button>
+<div class="page-foot fixed bottom-4 left-1/2 -translate-x-1/2 z-[9] text-[.68rem] tracking-[.1em] text-muted opacity-65 whitespace-nowrap cursor-default hidden sm:block" id="pageFoot">ساخته‌شده با خوش‌بینیِ غیرمنطقی · تأسیس: همین امشب</div>
+
+<div id="scrim" class="fixed inset-0 z-[85] bg-[rgba(8,3,14,.6)] backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300"></div>
+<aside id="drawer" class="drawer-bg fixed top-0 right-0 bottom-0 z-[90] w-[min(400px,100vw)] flex flex-col border-l border-line shadow-[-30px_0_80px_rgba(0,0,0,.6)] translate-x-full transition-transform duration-[380ms]" role="dialog" aria-modal="true" aria-label="اتاق فرمان" style="transition-timing-function:cubic-bezier(.2,1,.3,1)">
+  <div class="dr-head flex items-center justify-between py-[18px] px-5 border-b border-line">
+    <h2 class="font-black text-[1.25rem]">اتاق فرمان 🛰️</h2>
+    <button class="dr-close w-9 h-9 rounded-full grid place-items-center text-[1.1rem] border border-line text-muted transition-all hover:text-bad hover:border-bad hover:rotate-90" id="closeDrawer" aria-label="بستن">✕</button>
+  </div>
+  <div class="dr-body flex-1 overflow-y-auto py-[18px] px-5 pb-[30px] grid gap-[22px] content-start">
+    <div class="dr-sec grid gap-[10px]">
+      <h3 class="text-[.66rem] font-bold tracking-[.28em] uppercase text-acc flex items-center gap-2 after:content-[''] after:flex-1 after:h-px after:bg-line">اعلان‌ها</h3>
+      <div class="send-status flex items-center gap-2 text-[.74rem] text-muted"><span class="send-dot w-[9px] h-[9px] rounded-full bg-muted flex-none"></span><span id="sendStatus">هنوز سیگنالی ارسال نشده</span></div>
+      <div class="field grid gap-[5px]">
+        <label for="cfgTopic" class="text-[.74rem] text-muted tracking-[.04em]">تاپیک ntfy شما</label>
+        <div class="topic-row flex gap-2">
+          <input type="text" id="cfgTopic" spellcheck="false" class="flex-1 py-[11px] px-[13px] rounded-[11px] text-ink text-[.9rem] bg-[color-mix(in_oklab,var(--bg0)_70%,transparent)] border border-line transition-colors focus:border-dom focus:outline-none">
+          <button class="mini-btn flex-none w-11 rounded-[11px] border border-line text-base transition-all hover:border-acc hover:rotate-180" id="topicRand" title="تاپیک جدید" aria-label="تصادفی">🎲</button>
+        </div>
+      </div>
+      <ol class="steps text-[.74rem] text-muted leading-[1.7] pr-[18px]">
+        <li>اپ رایگان <b class="text-ink">ntfy</b> رو نصب کن (iOS / Android) — یا <b class="text-ink">ntfy.sh</b> رو تو یه تب باز نگه دار.</li>
+        <li>تو تاپیک بالا مشترک شو. این خط مستقیم شماست.</li>
+        <li><b class="text-ink">تست بزن</b> — گوشیت باید بلرزه.</li>
+        <li><b class="text-ink">لینک اون رو کپی کن</b>، این فایل رو هاست کن (Netlify Drop, GitHub Pages…) و براش بفرست. 💌</li>
+      </ol>
+      <div class="row2 grid grid-cols-2 gap-[10px]">
+        <button class="dr-btn soft py-3 px-4 min-h-[46px] rounded-xl font-bold text-[.86rem] border border-line text-ink bg-[color-mix(in_oklab,var(--bg1)_60%,transparent)] transition-all hover:-translate-y-[2px] hover:brightness-110" id="testBtn">📡 تست بزن</button>
+        <button class="dr-btn soft py-3 px-4 min-h-[46px] rounded-xl font-bold text-[.86rem] border border-line text-ink bg-[color-mix(in_oklab,var(--bg1)_60%,transparent)] transition-all hover:-translate-y-[2px] hover:brightness-110" id="subCopy">🔔 کپی لینک اشتراک</button>
+      </div>
+      <div class="tgl-row flex items-center justify-between text-[.84rem] py-1"><span>وقتی صفحه رو باز کرد بهم خبر بده 👀</span><button class="tgl relative w-[46px] h-[26px] rounded-full bg-bg1 border border-line transition-all flex-none after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:w-5 after:h-5 after:rounded-full after:bg-muted after:transition-all" id="openTgl" role="switch" aria-checked="true" aria-label="اعلان هنگام باز شدن"></button></div>
+      <button class="dr-btn primary act-primary-bg py-3 px-4 min-h-[46px] rounded-xl font-bold text-[.86rem] text-white transition-all hover:-translate-y-[2px] hover:brightness-110" id="linkCopy">💌 کپی لینک برای اون</button>
+      <p class="hint text-[.74rem] text-muted leading-[1.55]">لینک اون تمام این تنظیمات رو تو URL داره — اون این پنل رو نمی‌بینه. هر <b class="text-acc">آره</b>، هر تلاش ناموفق برای <b class="text-acc">نه</b>، به تاپیک شما پیام می‌فرسته.</p>
+    </div>
+
+    <div class="dr-sec grid gap-[10px]">
+      <h3 class="text-[.66rem] font-bold tracking-[.28em] uppercase text-acc flex items-center gap-2 after:content-[''] after:flex-1 after:h-px after:bg-line">اصلی‌ها</h3>
+      <div class="row2 grid grid-cols-2 gap-[10px]">
+        <div class="field grid gap-[5px]"><label for="cfgHer" class="text-[.74rem] text-muted tracking-[.04em]">اسم اون</label><input type="text" id="cfgHer" placeholder="تو" class="w-full py-[11px] px-[13px] rounded-[11px] text-ink text-[.9rem] bg-[color-mix(in_oklab,var(--bg0)_70%,transparent)] border border-line transition-colors focus:border-dom focus:outline-none"></div>
+        <div class="field grid gap-[5px]"><label for="cfgHim" class="text-[.74rem] text-muted tracking-[.04em]">اسم تو</label><input type="text" id="cfgHim" class="w-full py-[11px] px-[13px] rounded-[11px] text-ink text-[.9rem] bg-[color-mix(in_oklab,var(--bg0)_70%,transparent)] border border-line transition-colors focus:border-dom focus:outline-none"></div>
+      </div>
+      <div class="field grid gap-[5px]"><label for="cfgPhone" class="text-[.74rem] text-muted tracking-[.04em]">شمارهٔ تو (دکمهٔ «بهش پیام بده» اضافه می‌شه)</label><input type="tel" id="cfgPhone" placeholder="+98 912 345 6789" class="w-full py-[11px] px-[13px] rounded-[11px] text-ink text-[.9rem] bg-[color-mix(in_oklab,var(--bg0)_70%,transparent)] border border-line transition-colors focus:border-dom focus:outline-none"></div>
+    </div>
+
+    <div class="dr-sec grid gap-[10px]">
+      <h3 class="text-[.66rem] font-bold tracking-[.28em] uppercase text-acc flex items-center gap-2 after:content-[''] after:flex-1 after:h-px after:bg-line">برنامهٔ hangout</h3>
+      <div class="field grid gap-[5px]"><label for="cfgPlan" class="text-[.74rem] text-muted tracking-[.04em]">عنوان کلی (روی بلیط نشون داده می‌شه)</label><input type="text" id="cfgPlan" class="w-full py-[11px] px-[13px] rounded-[11px] text-ink text-[.9rem] bg-[color-mix(in_oklab,var(--bg0)_70%,transparent)] border border-line transition-colors focus:border-dom focus:outline-none"></div>
+      <div class="field grid gap-[5px]"><label for="cfgPlace" class="text-[.74rem] text-muted tracking-[.04em]">مکان</label><input type="text" id="cfgPlace" class="w-full py-[11px] px-[13px] rounded-[11px] text-ink text-[.9rem] bg-[color-mix(in_oklab,var(--bg0)_70%,transparent)] border border-line transition-colors focus:border-dom focus:outline-none"></div>
+      <div class="field grid gap-[5px]"><label for="cfgWhen" class="text-[.74rem] text-muted tracking-[.04em]">تاریخ و ساعت (شمارش معکوس + فایل تقویم)</label><input type="datetime-local" id="cfgWhen" class="w-full py-[11px] px-[13px] rounded-[11px] text-ink text-[.9rem] bg-[color-mix(in_oklab,var(--bg0)_70%,transparent)] border border-line transition-colors focus:border-dom focus:outline-none"></div>
+    </div>
+
+    <div class="dr-sec grid gap-[10px]">
+      <h3 class="text-[.66rem] font-bold tracking-[.28em] uppercase text-acc flex items-center gap-2 after:content-[''] after:flex-1 after:h-px after:bg-line">هرج‌ومرج و ظاهر</h3>
+      <div class="field grid gap-[5px]"><label class="text-[.74rem] text-muted tracking-[.04em]">میزان فرار دکمهٔ «نه»</label>
+        <div class="range-row flex items-center gap-3"><input type="range" id="chaosRange" min="0" max="10" step="1" class="flex-1 accent-dom h-7"><span class="range-val text-[.8rem] font-bold text-acc min-w-[26px] text-right tabular-nums" id="chaosVal">۵</span></div>
+      </div>
+      <div class="field grid gap-[5px]"><label class="text-[.74rem] text-muted tracking-[.04em]">تراکم ایموجی‌های شناور</label>
+        <div class="range-row flex items-center gap-3"><input type="range" id="heartsRange" min="0" max="60" step="1" class="flex-1 accent-dom h-7"><span class="range-val text-[.8rem] font-bold text-acc min-w-[26px] text-right tabular-nums" id="heartsVal">۱۰</span></div>
+      </div>
+      <div class="field grid gap-[5px]"><label for="themeSel" class="text-[.74rem] text-muted tracking-[.04em]">تم</label>
+        <select id="themeSel" class="w-full py-[11px] px-[13px] rounded-[11px] text-ink text-[.9rem] bg-[color-mix(in_oklab,var(--bg0)_70%,transparent)] border border-line transition-colors focus:border-dom focus:outline-none">
+          <option value="sunset">غروب عاشقانه — مجنتا و کهربایی</option>
+          <option value="neon">نئون نیمه‌شب — صورتی و فیروزه‌ای</option>
+          <option value="cherry">آلبالویی — قرمز و طلایی</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="dr-sec grid gap-[10px]">
+      <h3 class="text-[.66rem] font-bold tracking-[.28em] uppercase text-acc flex items-center gap-2 after:content-[''] after:flex-1 after:h-px after:bg-line">گزارش رویدادها</h3>
+      <div id="logList" class="grid gap-[6px] max-h-[220px] overflow-y-auto pr-1"></div>
+      <div class="row2 grid grid-cols-2 gap-[10px]">
+        <button class="dr-btn soft py-3 px-4 min-h-[46px] rounded-xl font-bold text-[.86rem] border border-line text-ink bg-[color-mix(in_oklab,var(--bg1)_60%,transparent)] transition-all hover:-translate-y-[2px] hover:brightness-110" id="clearLog">🧹 پاک کردن گزارش</button>
+        <button class="dr-btn warn py-3 px-4 min-h-[46px] rounded-xl font-bold text-[.86rem] border border-[color-mix(in_oklab,var(--bad)_55%,transparent)] text-bad transition-all hover:-translate-y-[2px] hover:brightness-110" id="resetBtn">↺ ریست تجربه</button>
+      </div>
+    </div>
+  </div>
+</aside>
+
+<script>
+"use strict";
+const $ = id => document.getElementById(id);
+const esc = s => String(s).replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const clamp = (v,a,b) => Math.min(b, Math.max(a, v));
+const rand = (a,b) => a + Math.random()*(b-a);
+const pick = a => a[Math.floor(Math.random()*a.length)];
+const b64enc = o => btoa(unescape(encodeURIComponent(JSON.stringify(o))));
+const b64dec = s => JSON.parse(decodeURIComponent(escape(atob(s))));
+const reduced = matchMedia('(prefers-reduced-motion: reduce)').matches;
+const finePointer = matchMedia('(pointer: fine)').matches;
+const fa = n => String(n).replace(/\d/g, d => '۰۱۲۳۴۵۶۷۸۹'[+d]);
+const LS = {
+  get(k,f){ try{ const v=localStorage.getItem(k); return v===null?f:JSON.parse(v);}catch(e){return f;} },
+  set(k,v){ try{ localStorage.setItem(k, JSON.stringify(v)); }catch(e){} },
+  del(k){ try{ localStorage.removeItem(k); }catch(e){} }
+};
+const DATE_ISO = '2026-11-20T09:30:00.000Z';
+const newTopic = () => 'date-quest-' + Math.random().toString(36).slice(2,8);
+
+function defaults(){
+  return {
+    her:'تو', him:'آرتور',
+    plan:'یه hangout ساده و خوش',
+    place:'سینما و کافه',
+    phone:'', topic:newTopic(), chaos:5, hearts:10, theme:'sunset', notifyOpen:true,
+    when: DATE_ISO
+  };
+}
+let cfg = defaults();
+Object.assign(cfg, LS.get('dq_cfg', {}));
+cfg.when = DATE_ISO;
+try{
+  const m = location.hash.match(/#c=([A-Za-z0-9+/=]+)/);
+  if (m){ Object.assign(cfg, b64dec(m[1])); cfg.when = DATE_ISO; LS.set('dq_cfg', cfg); }
+}catch(e){}
+LS.set('dq_cfg', cfg);
+
+let phase = 'intro';
+let attempts = 0, dodging = false, noGone = false;
+let noScale = 1, yesScale = 1, noX = 0, noY = 0;
+let lastAttempt = 0, lastNoSent = 0, replayCount = 0;
+let log = LS.get('dq_log', []);
+let pending = LS.get('dq_pending', []);
+let flushing = false, cdTimer = null, rainOn = false;
+let serial = LS.get('dq_serial', null);
+if (!serial){ serial = 'عشق-' + new Date().getFullYear() + '-' + Math.floor(rand(1000,9999)); LS.set('dq_serial', serial); }
+
+const dodgeStart = () => Math.max(2, 6 - Math.floor(cfg.chaos/2));
+const resignAt  = () => dodgeStart() + Math.max(4, 10 - cfg.chaos);
+
+const NO_LABELS = ["نه","مطمئنی؟","جدی مطمئنی؟؟","دوباره فکر کن 🤔","آخرین فرصته!","شوخی می‌کنی دیگه؟","پشیمون می‌شی‌ها!","دل رحم کن 💔","یخ که نباشی 🥶","گریه‌م گرفت 😭","التماس می‌کنم 🥺","جواب آخرته؟","عجب. باشه.","نه؟ کیه؟ نمی‌شناسم.","*صدای دکمه*","من تسلیم."];
+const YES_LABELS = ["آره 💖","آرههه 💗","آره دیگه!! 💘","بگو آره 🥹","آره آره آره 💞"];
+const NO_TOASTS = [
+  "حرکت جسورانه‌ای بود. دکمه قبول نداره.",
+  "دکمهٔ «نه» دچار اضطراب شد.",
+  "این کلیک به وزارت عشق گزارش شد.",
+  "خطای ۴۰۳: «نه» گفتن ممنوع.",
+  "دکمه از شک‌های تو سریع‌تره.",
+  "مشکل از تو نیست، از دکمه‌ست.",
+  "«نه» همون «آره»ست که ناز می‌کنه.",
+  "دکمه برات شکایت تنظیم کرده.",
+  "کوپید دید. کوپید ناامید شد.",
+  "این دکمه حالا هوازی کار می‌کنه.",
+  "Refusal.exe متوقف شد.",
+  "دکمه داره گرم می‌کنه. داره فرار می‌کنه."
+];
+const CAPS = [
+  "تلاش برای «نه»: {n} · موفقیت: ۰",
+  "دکمهٔ «نه» داره گرم می‌کنه",
+  "دکمهٔ «نه» شروع به دویدن کرد",
+  "دکمهٔ «نه» داره به بازنشستگی فکر می‌کنه",
+  "می‌گن هنوز داره می‌دوه"
+];
+
+const bgc = $('bgfx').getContext('2d');
+const cfc = $('confetti').getContext('2d');
+let W = innerWidth, H = innerHeight, DPR = Math.min(devicePixelRatio || 1, 2);
+let PAL = [];
+function refreshPalette(){
+  const cs = getComputedStyle(document.documentElement);
+  PAL = ['--dom','--dom2','--acc','--acc2','--good','--info'].map(v => cs.getPropertyValue(v).trim());
+}
+function sizeCanvases(){
+  W = innerWidth; H = innerHeight; DPR = Math.min(devicePixelRatio || 1, 2);
+  for (const c of [ $('bgfx'), $('confetti') ]){
+    c.width = W * DPR; c.height = H * DPR;
+    c.style.width = W+'px'; c.style.height = H+'px';
+    c.getContext('2d').setTransform(DPR,0,0,DPR,0,0);
+  }
+  if (dodging && !noGone) dodge(true);
+}
+const EMOJIS = ['☕','🎬','🍿','🎥','☕','🎬'];
+let ambient = [], sparks = [], confetti = [];
+function spawnAmbient(anyY){
+  ambient.push({ x:rand(0,W), y:anyY?rand(0,H):H+30, s:rand(18,28), vy:rand(-22,-8),
+    ph:rand(0,6.28), fq:rand(.3,.9), amp:rand(8,26), a:rand(.15,.35), emoji:pick(EMOJIS) });
+}
+for (let i=0;i<8;i++) sparks.push({ x:rand(0,W), y:rand(0,H), s:rand(1,2.4), ph:rand(0,6.28), fq:rand(.5,1.6) });
+function burst(x, y, n){
+  if (reduced) n = Math.ceil(n/2.5);
+  for (let i=0;i<n;i++){
+    const a = rand(0,6.28), sp = rand(120,560);
+    confetti.push({ x, y, vx:Math.cos(a)*sp, vy:Math.sin(a)*sp - rand(60,260),
+      g:760, rot:rand(0,6.28), vr:rand(-7,7), s:rand(18,28), life:rand(1.1,2.1), max:2.1,
+      emoji:pick(EMOJIS) });
+  }
+  if (confetti.length > 300) confetti.splice(0, confetti.length-300);
+}
+let rainAcc = 0;
+function spawnRain(){
+  confetti.push({ x:rand(0,W), y:-24, vx:rand(-16,16), vy:rand(46,110), g:12,
+    rot:rand(-.5,.5), vr:rand(-1.2,1.2), s:rand(20,30), life:12, max:12,
+    emoji:pick(EMOJIS), sway:rand(10,30), ph:rand(0,6.28) });
+}
+let px = 0, py = 0, tx = 0, ty = 0;
+addEventListener('pointermove', e => {
+  tx = (e.clientX/W - .5); ty = (e.clientY/H - .5);
+  if (phase==='asking' && finePointer && !reduced){
+    $('card').style.transform = `rotateY(${tx*5}deg) rotateX(${-ty*5}deg)`;
+  }
+}, {passive:true});
+let lastT = performance.now(), running = true;
+function loop(t){
+  requestAnimationFrame(loop);
+  if (!running) { lastT = t; return; }
+  const dt = clamp((t - lastT)/1000, 0, .05); lastT = t;
+  px += (tx-px)*.06; py += (ty-py)*.06;
+  const target = reduced ? Math.ceil(cfg.hearts/2) : cfg.hearts;
+  if (ambient.length < target && Math.random()<.3) spawnAmbient(true);
+  if (ambient.length > target) ambient.splice(0, ambient.length-target);
+  bgc.clearRect(0,0,W,H);
+  for (const h of ambient){
+    h.y += h.vy*dt; h.ph += h.fq*dt;
+    if (h.y < -40){ h.y = H+30; h.x = rand(0,W); }
+    const x = h.x + Math.sin(h.ph)*h.amp + px*22;
+    const y = h.y + py*16;
+    bgc.save(); bgc.translate(x,y); bgc.globalAlpha = h.a;
+    bgc.font = `${h.s}px sans-serif`; bgc.textAlign = 'center'; bgc.textBaseline = 'middle';
+    bgc.fillText(h.emoji, 0, 0);
+    bgc.restore();
+  }
+  for (const s of sparks){
+    s.ph += s.fq*dt;
+    const a = (Math.sin(s.ph)+1)/2 * .5;
+    bgc.save(); bgc.translate(s.x + px*34, s.y + py*24); bgc.globalAlpha = a;
+    bgc.strokeStyle = PAL[2] || '#ffb347'; bgc.lineWidth = 1;
+    bgc.beginPath(); bgc.moveTo(-s.s*3,0); bgc.lineTo(s.s*3,0); bgc.moveTo(0,-s.s*3); bgc.lineTo(0,s.s*3); bgc.stroke();
+    bgc.restore();
+  }
+  if (rainOn && phase==='celebrating'){
+    rainAcc += dt;
+    const every = reduced ? .5 : .18;
+    while (rainAcc > every){ rainAcc -= every; spawnRain(); }
+  }
+  cfc.clearRect(0,0,W,H);
+  for (let i=confetti.length-1; i>=0; i--){
+    const p = confetti[i];
+    p.life -= dt; p.vy += p.g*dt; p.vx *= .995;
+    p.x += p.vx*dt + (p.sway ? Math.sin(p.ph += dt*2)*p.sway*dt : 0);
+    p.y += p.vy*dt; p.rot += p.vr*dt;
+    if (p.life <= 0 || p.y > H+50){ confetti.splice(i,1); continue; }
+    cfc.save(); cfc.translate(p.x,p.y); cfc.rotate(p.rot);
+    cfc.globalAlpha = clamp(p.life/.45, 0, 1);
+    cfc.font = `${p.s}px sans-serif`; cfc.textAlign = 'center'; cfc.textBaseline = 'middle';
+    cfc.fillText(p.emoji, 0, 0);
+    cfc.restore();
+  }
+}
+document.addEventListener('visibilitychange', () => { running = !document.hidden; });
+addEventListener('resize', sizeCanvases);
+
+function toast(msg){
+  const box = $('toasts');
+  while (box.children.length >= 3) box.firstChild.remove();
+  const el = document.createElement('div');
+  el.className = 'toast py-[11px] px-5 rounded-full text-[.86rem] font-medium text-center bg-surface2 border border-line backdrop-blur-[12px] shadow-[0_12px_30px_rgba(0,0,0,.45)] animate-toast-in';
+  el.textContent = msg;
+  box.appendChild(el);
+  setTimeout(()=>{ el.classList.remove('animate-toast-in'); el.classList.add('animate-toast-out'); setTimeout(()=>el.remove(), 320); }, 2600);
+}
+
+function renderLog(){
+  const list = $('logList'); list.innerHTML = '';
+  if (!log.length){ list.innerHTML = '<div class="log-empty text-[.76rem] text-muted italic">هنوز هیچی. لینک رو براش بفرست و منتظر بمون. 📱</div>'; return; }
+  const icons = { yes:'💘', no:'🏃', open:'👀', test:'🔧', resign:'🏳️' };
+  for (const e of log.slice(0,40)){
+    const row = document.createElement('div'); row.className = 'log-item flex items-center gap-[9px] text-[.76rem] py-2 px-[10px] rounded-[10px] bg-[color-mix(in_oklab,var(--bg0)_55%,transparent)] border border-[color-mix(in_oklab,var(--line)_45%,transparent)]';
+    const t = new Date(e.t);
+    const statusText = e.status==='sent' ? 'ارسال شد' : e.status==='queued' ? 'در صف' : 'محلی';
+    row.innerHTML = `<span>${icons[e.type]||'•'}</span><span class="li-msg flex-1 leading-[1.35]">${esc(e.msg)}</span>
+      <span class="log-st text-[.6rem] font-bold tracking-[.08em] uppercase py-[3px] px-[7px] rounded-full flex-none ${e.status==='sent'?'text-good border border-good':e.status==='queued'?'text-warn border border-warn':'text-muted border border-muted'}">${statusText}</span>
+      <time class="text-muted text-[.66rem] flex-none">${t.toLocaleTimeString('fa-IR',{hour:'2-digit',minute:'2-digit'})}</time>`;
+    list.appendChild(row);
+  }
+}
+function setSendStatus(ok, text){
+  $('sendDot').className = 'send-dot w-[9px] h-[9px] rounded-full flex-none ' + (ok?'bg-good shadow-[0_0_10px_var(--good)]':'bg-warn shadow-[0_0_10px_var(--warn)]');
+  $('sendStatus').textContent = text;
+}
+async function deliver(entry, payload){
+  try{
+    const res = await fetch('https://ntfy.sh/', { method:'POST', keepalive:true, body: JSON.stringify(payload) });
+    if (res.ok){
+      entry.status = 'sent';
+      setSendStatus(true, 'آخرین سیگنال ارسال شد ' + new Date().toLocaleTimeString('fa-IR',{hour:'2-digit',minute:'2-digit'}));
+      // if (entry.type==='yes') $('notifyChip').textContent = `📳 گوشی ${cfg.him} همین الان لرزید. خبر رسید.`;
+    } else throw new Error(res.status);
+  }catch(e){
+    entry.status = 'queued';
+    pending.push({ id:entry.id, payload });
+    if (pending.length > 20) pending.shift();
+    LS.set('dq_pending', pending);
+    setSendStatus(false, 'سیگنال در صف — وقتی آنلاین شد ارسال می‌شه');
+    // if (entry.type==='yes') $('notifyChip').textContent = '💌 خبر در صفه — به محض اتصال ارسال می‌شه.';
+  }
+  LS.set('dq_log', log); renderLog();
+}
+function notify(type, opts = {}){
+  const her = cfg.her && cfg.her!=='تو' ? cfg.her : 'اون';
+  const time = new Date().toLocaleString('fa-IR',{weekday:'short',hour:'numeric',minute:'2-digit'});
+  let title, message, priority = 3, tags = ['heart'];
+  if (type==='yes'){
+    title = replayCount ? `💘 ${her} دوباره گفت آره!` : `💘 ${her} گفت آره!`;
+    message = `بعد از ${fa(attempts)} تلاش ناموفق برای «نه»، قبول کرد! ${cfg.plan} · ${time}. برو دلبری کن ${cfg.him}.`;
+    priority = 5; tags = ['tada','heart'];
+  } else if (type==='resign'){
+    title = '🏳️ دکمهٔ «نه» استعفا داد';
+    message = `${her} بعد از ${fa(attempts)} تلاش خسته‌ش کرد. از صفحه فرار کرد. حالا فقط «آره» مونده. ${time}`;
+    priority = 4; tags = ['runner'];
+  } else if (type==='no'){
+    title = `🏃 تلاش برای «نه» #${fa(attempts)}`;
+    message = `${her} دکمهٔ «نه» رو زد. دکمه فرار کرد. ${time}`;
+    tags = ['runner'];
+  } else if (type==='open'){
+    title = '👀 صفحهٔ سؤال رو باز کرد';
+    message = `صفحه الان رو صفحهٔ اون بازه. لحظهٔ حقیقت ${cfg.him}. ${time}`;
+    priority = 2; tags = ['eyes'];
+  } else {
+    title = '🔧 تست از اتاق فرمان';
+    message = `اعلان‌ها درست وصلن. موفق باشی ${cfg.him}. 🫡`;
+    tags = ['satellite'];
+  }
+  const entry = { id:Date.now()+Math.random(), t:Date.now(), type, msg:title.replace(/^[^\s]+\s/,''), status:'local' };
+  log.unshift(entry); if (log.length > 80) log.pop();
+  if (type==='no' && attempts > 1 && Date.now() - lastNoSent < 20000){ LS.set('dq_log', log); renderLog(); return; }
+  if (type==='no') lastNoSent = Date.now();
+  entry.status = 'queued';
+  deliver(entry, { topic:cfg.topic, title, message, priority, tags });
+}
+async function flushPending(){
+  if (flushing || !pending.length) return;
+  flushing = true;
+  const queue = pending.slice(); pending = []; LS.set('dq_pending', pending);
+  for (const item of queue){
+    try{
+      const res = await fetch('https://ntfy.sh/', { method:'POST', keepalive:true, body:JSON.stringify(item.payload) });
+      if (res.ok){
+        const e = log.find(l => l.id === item.id);
+        if (e) e.status = 'sent';
+        setSendStatus(true, 'سیگنال‌های در صف ارسال شدن ✓');
+      } else { pending.push(item); }
+    }catch(e){ pending.push(item); }
+  }
+  LS.set('dq_pending', pending); LS.set('dq_log', log); renderLog();
+  flushing = false;
+}
+addEventListener('online', flushPending);
+
+function fmtWhen(){
+  const d = new Date(cfg.when);
+  if (isNaN(d)) return 'به‌زودی™';
+  return d.toLocaleString('fa-IR',{ timeZone:'Asia/Tehran', weekday:'long', month:'long', day:'numeric', hour:'numeric', minute:'2-digit' }) + ' · ۲۹ آبان';
+}
+function applyCfg(){
+  document.documentElement.className = cfg.theme;
+  refreshPalette();
+  const herNamed = cfg.her && cfg.her.trim() && cfg.her !== 'تو';
+  $('introTitle').textContent = herNamed ? `یه چیزی برای ${cfg.her}، با کلی شجاعت` : 'یه چیزی برات، با کلی شجاعت';
+$('questionText').innerHTML = (herNamed ? `${esc(cfg.her)}،<br>` : '') + 'می‌خوای با هم <b>بریم بیرون</b>؟';
+$('yaySub').textContent = `${herNamed ? cfg.her + '، تو' : 'تو'} الان با ${cfg.him} هماهنگ شدی. بلیط زیر رو نگه دار؛ شاید روزی ارزش کلکسیونی پیدا کنه.`;
+  $('ticketPlan').textContent = cfg.plan;
+  $('ticketWhen').textContent = '🗓 ' + fmtWhen();
+  $('ticketSerial').textContent = 'SERIAL ' + serial + ' · ۲۹ آبان · غیرقابل انتقال';
+  $('smsBtn').hidden = !cfg.phone.trim();
+  $('smsBtn').textContent = `💬 به ${cfg.him} پیام بده`;
+  $('cfgHer').value = cfg.her === 'تو' ? '' : cfg.her;
+  $('cfgHim').value = cfg.him;
+  $('cfgPlan').value = cfg.plan;
+  $('cfgPlace').value = cfg.place;
+  $('cfgPhone').value = cfg.phone;
+  $('cfgTopic').value = cfg.topic;
+  const d = new Date(cfg.when);
+  if (!isNaN(d)){
+    const p = n => String(n).padStart(2,'0');
+    $('cfgWhen').value = `${d.getUTCFullYear()}-${p(d.getUTCMonth()+1)}-${p(d.getUTCDate())}T${p(d.getUTCHours())}:${p(d.getUTCMinutes())}`;
+  }
+  $('chaosRange').value = cfg.chaos; $('chaosVal').textContent = fa(cfg.chaos);
+  $('heartsRange').value = cfg.hearts; $('heartsVal').textContent = fa(cfg.hearts);
+  $('themeSel').value = cfg.theme;
+  $('openTgl').setAttribute('aria-checked', String(cfg.notifyOpen));
+  const tglStyle = (el, checked) => {
+    if (checked) {
+      el.style.background = 'color-mix(in oklab,var(--dom) 55%,var(--bg1))';
+      el.style.borderColor = 'var(--dom)';
+      const after = el.querySelector('span') || document.createElement('span');
+      if (!el.querySelector('span')) {
+        after.style.cssText = 'position:absolute;top:2px;left:22px;width:20px;height:20px;border-radius:50%;background:#fff;transition:all .25s cubic-bezier(.2,1.4,.3,1)';
+        el.appendChild(after);
+      }
+    } else {
+      el.style.background = '';
+      el.style.borderColor = '';
+      const after = el.querySelector('span');
+      if (after) after.style.left = '2px';
+    }
+  };
+  tglStyle($('openTgl'), cfg.notifyOpen);
+}
+function saveCfg(){ LS.set('dq_cfg', cfg); }
+
+const noBtn = $('noBtn'), yesBtn = $('yesBtn'), roam = $('roam');
+function overlaps(x,y,w,h,r,pad){
+  return !(x+w < r.left-pad || x > r.right+pad || y+h < r.top-pad || y > r.bottom+pad);
+}
+function dodge(instant){
+  const bw = noBtn.offsetWidth * noScale, bh = noBtn.offsetHeight * noScale;
+  const yr = yesBtn.getBoundingClientRect();
+  let x = noX, y = noY;
+  for (let i=0;i<24;i++){
+    x = rand(12, Math.max(13, W - bw - 12));
+    y = rand(76, Math.max(77, H - bh - 26));
+    if (overlaps(x,y,bw,bh,yr,28)) continue;
+    if (x < 80 && y > H-90) continue;
+    break;
+  }
+  noX = x; noY = y;
+  if (instant) noBtn.style.transition = 'none';
+  noBtn.style.transform = `translate(${x}px,${y}px) scale(${noScale})`;
+  if (instant){ void noBtn.offsetWidth; noBtn.style.transition = ''; }
+}
+function startDodge(){
+  if (dodging) return;
+  const r = noBtn.getBoundingClientRect();
+  dodging = true;
+  noBtn.classList.add('roaming');
+  noBtn.style.pointerEvents = 'auto';
+  roam.appendChild(noBtn);
+  noX = r.left; noY = r.top;
+  dodge(true);
+  requestAnimationFrame(()=>dodge());
+}
+function attempt(){
+  if (phase !== 'asking' || noGone) return;
+  const now = Date.now();
+  if (now - lastAttempt < 350) { if (dodging) dodge(); return; }
+  lastAttempt = now;
+  attempts++;
+  noScale = Math.max(.32, noScale * .84);
+  yesScale = Math.min(W < 480 ? 1.28 : 1.5, 1 + attempts * .07);
+  yesBtn.style.transform = `scale(${yesScale})`;
+  yesBtn.textContent = YES_LABELS[Math.min(Math.floor(attempts/3), YES_LABELS.length-1)];
+  noBtn.textContent = NO_LABELS[Math.min(attempts, NO_LABELS.length-1)];
+  $('attemptsCap').textContent = CAPS[Math.min(Math.floor(attempts/3), CAPS.length-1)].replace('{n}', fa(attempts));
+  toast(NO_TOASTS[(attempts-1) % NO_TOASTS.length]);
+  const card = $('card');
+  card.classList.remove('animate-shake'); void card.offsetWidth; card.classList.add('animate-shake');
+  const r = noBtn.getBoundingClientRect();
+  burst(r.left + r.width/2, r.top + r.height/2, 10);
+  notify('no');
+  if (attempts >= resignAt()){
+    noGone = true;
+    burst(r.left + r.width/2, r.top + r.height/2, 44);
+    noBtn.remove();
+    $('resignedNote').hidden = false;
+    $('attemptsCap').textContent = `تلاش برای «نه»: ${fa(attempts)} · موفقیت: ۰ · دکمه: رفته`;
+    notify('resign');
+  } else if (attempts >= dodgeStart()){
+    startDodge();
+    if (dodging) dodge();
+  } else {
+    noBtn.style.transform = `scale(${noScale})`;
+  }
+}
+noBtn.addEventListener('click', e => { e.preventDefault(); attempt(); });
+noBtn.addEventListener('pointerenter', e => { if (dodging && e.pointerType==='mouse') attempt(); });
+noBtn.addEventListener('pointerdown', e => {
+  if (dodging && e.pointerType!=='mouse'){ e.preventDefault(); attempt(); }
+});
+noBtn.addEventListener('focus', () => { if (dodging && !noGone) dodge(); });
+noBtn.addEventListener('keydown', e => {
+  if (e.key==='Enter' || e.key===' '){ e.preventDefault(); attempt(); }
+});
+
+function buildYayTitle(){
+  const el = $('yayTitle');
+  el.innerHTML = '';
+  el.setAttribute('lang', 'fa');
+  el.setAttribute('dir', 'rtl');
+
+  const text = 'هماهنگ شد!';
+  el.setAttribute('aria-label', text);
+
+  text.split(' ').forEach((w, i) => {
+    const b = document.createElement('b');
+    b.textContent = w;
+    b.style.setProperty('--i', i);
+    b.className = 'inline-block grad-text animate-letter-pop';
+    b.style.animationDelay = `calc(.25s + ${i} * .055s)`;
+    el.appendChild(b);
+  });
+}
+console.log('when:', cfg.when, '| parsed:', new Date(cfg.when).toString(),
+            '| valid:', !Number.isNaN(new Date(cfg.when).getTime()));
+console.log('elements:', ['countdown','cdD','cdH','cdM','cdS'].map(id => id + ':' + !!$(id)));
+function startCountdown(){
+  clearInterval(cdTimer);
+  const tick = () => {
+    const diff = new Date(cfg.when) - Date.now();
+    if (isNaN(diff)) { $('countdown').hidden = true; return; }
+    $('countdown').hidden = false;
+    if (diff <= 0){
+      $('cdD').textContent = '۰'; $('cdH').textContent = '۰'; $('cdM').textContent = '۰'; $('cdS').textContent = '۰';
+      return;
+    }
+    $('cdD').textContent = fa(Math.floor(diff/864e5));
+    $('cdH').textContent = fa(Math.floor(diff/36e5)%24);
+    $('cdM').textContent = fa(Math.floor(diff/6e4)%60);
+    $('cdS').textContent = fa(Math.floor(diff/1e3)%60);
+  };
+  tick(); cdTimer = setInterval(tick, 1000);
+}
+function showYay(instant){
+  phase = 'celebrating';
+  $('askView').hidden = true; $('introView').hidden = true;
+  $('yayView').hidden = false;
+  buildYayTitle();
+  // $('notifyChip').textContent = `💌 داریم به ${cfg.him} می‌گیم…`;
+  rainOn = true;
+  startCountdown();
+  if (!instant){
+    setTimeout(()=>burst(W*.5, H*.32, 60), 900);
+  }
+}
+yesBtn.addEventListener('click', () => {
+  if (phase !== 'asking') return;
+  phase = 'transition';
+  LS.set('dq_accepted', true);
+  const r = yesBtn.getBoundingClientRect();
+  burst(r.left + r.width/2, r.top + r.height/2, 150);
+  $('flash').classList.remove('animate-flash'); void $('flash').offsetWidth; $('flash').classList.add('animate-flash');
+  $('card').style.transform = '';
+  $('cardWrap').classList.remove('animate-card-in');
+  $('cardWrap').classList.add('animate-card-out');
+  if (!noGone) noBtn.remove();
+  notify('yes');
+  setTimeout(()=>showYay(false), 480);
+});
+
+function icsEscape(s){ return String(s).replace(/\\/g,'\\\\').replace(/[,;]/g, m=>'\\'+m).replace(/\n/g,'\\n'); }
+$('smsBtn').addEventListener('click', () => {
+  location.href = `sms:${cfg.phone.replace(/[^\d+]/g,'')}?&body=${encodeURIComponent(`باشه بابا، hangout کنیم 🎬☕ — ۲۹ آبان، ساعت ۱`)}`;
+});
+function resetExperience(toIntro){
+  LS.del('dq_accepted');
+  attempts = 0; dodging = false; noGone = false; noScale = 1; yesScale = 1;
+  noBtn.classList.remove('roaming');
+  noBtn.style.transform = ''; noBtn.style.pointerEvents = '';
+  noBtn.textContent = 'نه';
+  $('btnRow').appendChild(noBtn);
+  yesBtn.style.transform = ''; yesBtn.textContent = YES_LABELS[0];
+  $('resignedNote').hidden = true;
+  $('attemptsCap').innerHTML = '&nbsp;';
+  $('cardWrap').classList.remove('animate-card-out');
+  $('cardWrap').classList.add('animate-card-in');
+  $('card').style.transform = '';
+  rainOn = false; clearInterval(cdTimer);
+  $('yayView').hidden = true;
+  if (toIntro){ phase='intro'; $('introView').hidden=false;
+$('askView').hidden=true; }
+  else { phase='asking'; $('introView').hidden=true; $('askView').hidden=false; }
+}
+$('replayBtn').addEventListener('click', () => { replayCount++; resetExperience(false); toast('دور دوم. دکمه یادشه. 👀'); });
+
+function openEnvelope(){
+  if (phase !== 'intro') return;
+  phase = 'opening';
+  const env = $('envelope');
+  const flap = env.querySelector('.env-flap-bg');
+  const letter = env.querySelector('.env-letter-bg');
+  const seal = $('sealBtn');
+  if (flap) flap.style.transform = 'rotateX(180deg)';
+  if (flap) setTimeout(()=>flap.style.zIndex='1', 280);
+  if (letter) letter.style.transform = 'translateY(-46%) scale(1.05)';
+  if (seal) seal.style.transform = 'translate(-50%,-50%) scale(0)';
+  $('introInner').style.animation = 'fadeOut .4s ease .55s both';
+  const r = seal.getBoundingClientRect();
+  burst(r.left + r.width/2, r.top + r.height/2, 26);
+  setTimeout(() => {
+    $('introView').hidden = true;
+    $('askView').hidden = false;
+    phase = 'asking';
+  }, 980);
+}
+$('sealBtn').addEventListener('click', e => { e.stopPropagation(); openEnvelope(); });
+$('envelope').addEventListener('click', openEnvelope);
+
+const drawer = $('drawer'), scrim = $('scrim');
+function openDrawer(){
+  drawer.classList.remove('translate-x-full');
+  scrim.classList.remove('opacity-0','pointer-events-none');
+  scrim.classList.add('opacity-100','pointer-events-auto');
+  renderLog(); flushPending();
+  setTimeout(()=>$('cfgHer').focus(), 380);
+}
+function closeDrawer(){
+  drawer.classList.add('translate-x-full');
+  scrim.classList.add('opacity-0','pointer-events-none');
+  scrim.classList.remove('opacity-100','pointer-events-auto');
+  $('gearBtn').focus();
+}
+$('gearBtn').addEventListener('click', openDrawer);
+$('closeDrawer').addEventListener('click', closeDrawer);
+scrim.addEventListener('click', closeDrawer);
+addEventListener('keydown', e => { if (e.key==='Escape' && !drawer.classList.contains('translate-x-full')) closeDrawer(); });
+let footTaps = 0, footTimer = null;
+$('pageFoot').addEventListener('click', () => {
+  footTaps++; clearTimeout(footTimer);
+  footTimer = setTimeout(()=>footTaps=0, 700);
+  if (footTaps >= 3){ footTaps = 0; openDrawer(); }
+});
+function bindField(id, key, transform){
+  $(id).addEventListener('input', e => {
+    cfg[key] = transform ? transform(e.target.value) : e.target.value;
+    saveCfg(); applyCfg();
+  });
+}
+bindField('cfgHer','her', v => v.trim() || 'تو');
+bindField('cfgHim','him', v => v.trim() || 'آرتور');
+bindField('cfgPlan','plan');
+bindField('cfgPlace','place');
+bindField('cfgPhone','phone');
+bindField('cfgTopic','topic', v => v.trim().replace(/[^\w-]/g,'-') || newTopic());
+$('cfgWhen').addEventListener('input', e => {
+  const d = new Date(e.target.value);
+  if (!isNaN(d)){ cfg.when = d.toISOString(); saveCfg(); applyCfg(); }
+});
+$('topicRand').addEventListener('click', () => { cfg.topic = newTopic(); saveCfg(); applyCfg(); toast('تاپیک جدید. تو ntfy دوباره مشترک شو! 🎲'); });
+$('chaosRange').addEventListener('input', e => { cfg.chaos = +e.target.value; saveCfg(); applyCfg(); });
+$('heartsRange').addEventListener('input', e => { cfg.hearts = +e.target.value; saveCfg(); applyCfg(); });
+$('themeSel').addEventListener('change', e => { cfg.theme = e.target.value; saveCfg(); applyCfg(); });
+$('openTgl').addEventListener('click', () => { cfg.notifyOpen = !cfg.notifyOpen; saveCfg(); applyCfg(); });
+$('testBtn').addEventListener('click', () => { notify('test'); toast('تست به تاپیک شما فرستاده شد. گوشی لرزید؟ 📡'); });
+async function copyText(text, okMsg){
+  try{ await navigator.clipboard.writeText(text); toast(okMsg); }
+  catch(e){
+    const ta = document.createElement('textarea');
+    ta.value = text; document.body.appendChild(ta); ta.select();
+    try{ document.execCommand('copy'); toast(okMsg); }catch(e2){ toast('کپی نشد — روی فیلد long-press کن.'); }
+    ta.remove();
+  }
+}
+$('subCopy').addEventListener('click', () => copyText('https://ntfy.sh/'+cfg.topic, 'لینک اشتراک کپی شد. رو گوشی خودت بازش کن. 🔔'));
+$('linkCopy').addEventListener('click', () => {
+  const share = { her:cfg.her, him:cfg.him, plan:cfg.plan, place:cfg.place, when:cfg.when,
+    phone:cfg.phone, topic:cfg.topic, chaos:cfg.chaos, hearts:cfg.hearts, theme:cfg.theme,
+    notifyOpen:cfg.notifyOpen };
+  const url = location.href.split('#')[0] + '#c=' + b64enc(share);
+  copyText(url, 'لینک اون کپی شد — بفرست و نزدیک گوشیت بمون. 💌');
+  if (location.protocol === 'file:') toast('توجه: اول این فایل رو آنلاین هاست کن — لینک file:// فقط اینجا کار می‌کنه.');
+});
+$('clearLog').addEventListener('click', () => { log = []; LS.set('dq_log', log); renderLog(); toast('گزارش پاک شد. تاریخ رو فاتحان می‌نویسن.'); });
+$('resetBtn').addEventListener('click', () => { resetExperience(true); closeDrawer(); toast('تجربه ریست شد. پاکت نامه منتظره. 💌'); });
+
+applyCfg();
+sizeCanvases();
+renderLog();
+requestAnimationFrame(loop);
+if (LS.get('dq_accepted', false)){
+  showYay(true);
+}
+if (cfg.notifyOpen && !sessionStorage.getItem('dq_opened')){
+  try{ sessionStorage.setItem('dq_opened','1'); }catch(e){}
+  notify('open');
+}
+flushPending();
+</script>
+</body>
+</html>
