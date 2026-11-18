@@ -590,7 +590,6 @@ function applyCfg(){
   document.documentElement.className = cfg.theme;
   refreshPalette();
   const herNamed = cfg.her && cfg.her.trim() && cfg.her !== 'تو';
-  $('introTitle').textContent = herNamed ? `یه چیزی برای ${cfg.her}، با کلی شجاعت` : 'یه چیزی برات، با کلی شجاعت';
 $('questionText').innerHTML = (herNamed ? `${esc(cfg.her)}،<br>` : '') + 'می‌خوای با هم <b>بریم بیرون</b>؟';
 $('yaySub').textContent = `${herNamed ? cfg.her + '، تو' : 'تو'} الان با ${cfg.him} هماهنگ شدی. بلیط زیر رو نگه دار؛ شاید روزی ارزش کلکسیونی پیدا کنه.`;
   $('ticketPlan').textContent = cfg.plan;
