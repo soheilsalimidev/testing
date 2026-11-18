@@ -169,7 +169,6 @@ input, select { font-family:inherit; }
         <button class="seal-bg absolute left-1/2 top-[56%] -translate-x-1/2 -translate-y-1/2 z-[5] w-[66px] h-[66px] rounded-full grid place-items-center text-[1.6rem] transition-transform hover:scale-110 hover:-rotate-6" id="sealBtn" aria-label="باز کردن نامه">💌</button>
         <div class="absolute left-1/2 top-[56%] -translate-x-1/2 -translate-y-1/2 w-[84px] h-[84px] rounded-full border-2 border-dom2 opacity-70 animate-seal-pulse pointer-events-none"></div>
       </div>
-      <p class="text-[.8rem] text-muted tracking-[.08em]">روی مُهر بزن · تمبر لازم نیست</p>
     </div>
   </div>
 </section>
@@ -225,9 +224,6 @@ input, select { font-family:inherit; }
       <div class="cd-cell min-w-[72px] py-3 px-[10px] rounded-[14px] bg-surface border border-line"><b class="block font-black text-[1.7rem] text-acc tabular-nums" id="cdH">۰</b><i class="not-italic text-[.62rem] tracking-[.22em] uppercase text-muted">ساعت</i></div>
       <div class="cd-cell min-w-[72px] py-3 px-[10px] rounded-[14px] bg-surface border border-line"><b class="block font-black text-[1.7rem] text-acc tabular-nums" id="cdM">۰</b><i class="not-italic text-[.62rem] tracking-[.22em] uppercase text-muted">دقیقه</i></div>
       <div class="cd-cell min-w-[72px] py-3 px-[10px] rounded-[14px] bg-surface border border-line"><b class="block font-black text-[1.7rem] text-acc tabular-nums" id="cdS">۰</b><i class="not-italic text-[.62rem] tracking-[.22em] uppercase text-muted">ثانیه</i></div>
-    </div>
-    <div class="yay-actions flex gap-3 flex-wrap justify-center animate-rise-in" style="animation-delay:1.35s">
-      <button class="act ghost py-[13px] px-[22px] min-h-[48px] rounded-full font-bold text-[.92rem] text-acc border-[1.5px] border-[color-mix(in_oklab,var(--acc)_55%,transparent)] transition-all hover:-translate-y-[3px]" id="smsBtn" hidden>💬 بهش پیام بده</button>
     </div>
     <button class="replay text-[.74rem] text-muted underline decoration-dotted opacity-70 hover:opacity-100 hover:text-dom2 animate-rise-in" style="animation-delay:1.5s" id="replayBtn">سؤال رو دوباره ببین (برای علم)</button>
   </div>
@@ -363,7 +359,7 @@ let log = LS.get('dq_log', []);
 let pending = LS.get('dq_pending', []);
 let flushing = false, cdTimer = null, rainOn = false;
 let serial = LS.get('dq_serial', null);
-if (!serial){ serial = 'عشق-' + new Date().getFullYear() + '-' + Math.floor(rand(1000,9999)); LS.set('dq_serial', serial); }
+if (!serial){ serial =  new Date().getFullYear() + '-' + Math.floor(rand(1000,9999)); LS.set('dq_serial', serial); }
 
 const dodgeStart = () => Math.max(2, 6 - Math.floor(cfg.chaos/2));
 const resignAt  = () => dodgeStart() + Math.max(4, 10 - cfg.chaos);
@@ -373,7 +369,6 @@ const YES_LABELS = ["آره 💖","آرههه 💗","آره دیگه!! 💘","ب
 const NO_TOASTS = [
   "حرکت جسورانه‌ای بود. دکمه قبول نداره.",
   "دکمهٔ «نه» دچار اضطراب شد.",
-  "این کلیک به وزارت عشق گزارش شد.",
   "خطای ۴۰۳: «نه» گفتن ممنوع.",
   "دکمه از شک‌های تو سریع‌تره.",
   "مشکل از تو نیست، از دکمه‌ست.",
@@ -514,8 +509,8 @@ function renderLog(){
   }
 }
 function setSendStatus(ok, text){
-  $('sendDot').className = 'send-dot w-[9px] h-[9px] rounded-full flex-none ' + (ok?'bg-good shadow-[0_0_10px_var(--good)]':'bg-warn shadow-[0_0_10px_var(--warn)]');
-  $('sendStatus').textContent = text;
+  // $('sendDot').className = 'send-dot w-[9px] h-[9px] rounded-full flex-none ' + (ok?'bg-good shadow-[0_0_10px_var(--good)]':'bg-warn shadow-[0_0_10px_var(--warn)]');
+  // $('sendStatus').textContent = text;
 }
 async function deliver(entry, payload){
   try{
@@ -601,8 +596,6 @@ $('yaySub').textContent = `${herNamed ? cfg.her + '، تو' : 'تو'} الان �
   $('ticketPlan').textContent = cfg.plan;
   $('ticketWhen').textContent = '🗓 ' + fmtWhen();
   $('ticketSerial').textContent = 'SERIAL ' + serial + ' · ۲۹ آبان · غیرقابل انتقال';
-  $('smsBtn').hidden = !cfg.phone.trim();
-  $('smsBtn').textContent = `💬 به ${cfg.him} پیام بده`;
   $('cfgHer').value = cfg.her === 'تو' ? '' : cfg.her;
   $('cfgHim').value = cfg.him;
   $('cfgPlan').value = cfg.plan;
@@ -777,9 +770,6 @@ yesBtn.addEventListener('click', () => {
 });
 
 function icsEscape(s){ return String(s).replace(/\\/g,'\\\\').replace(/[,;]/g, m=>'\\'+m).replace(/\n/g,'\\n'); }
-$('smsBtn').addEventListener('click', () => {
-  location.href = `sms:${cfg.phone.replace(/[^\d+]/g,'')}?&body=${encodeURIComponent(`باشه بابا، hangout کنیم 🎬☕ — ۲۹ آبان، ساعت ۱`)}`;
-});
 function resetExperience(toIntro){
   LS.del('dq_accepted');
   attempts = 0; dodging = false; noGone = false; noScale = 1; yesScale = 1;
